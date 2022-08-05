@@ -141,6 +141,7 @@ onMounted(() => {
     moving = false;
   });
   graphView.value.addEventListener("wheel", (e) => {
+    e.preventDefault();
     wheelScale += e.deltaY / 1000;
     scale = Math.pow(10, wheelScale);
   });
